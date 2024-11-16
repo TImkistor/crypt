@@ -70,11 +70,6 @@ buttonEncrypt.id = "buttonEncrypt"
 buttonDecrypt.id = "buttonDecrypt"
 
 //Анимация для кнопки Encrypt
-function deffualtButtonEncrypt(){
-    buttonEncrypt.addEventListener("mouseover", function() {
-        buttonEncrypt.style.backgroundColor = "rgb(9, 30, 16)";
-        });
-}
 buttonEncrypt.addEventListener("mouseover", function() {
     buttonEncrypt.style.backgroundColor = "rgb(9, 30, 16)";
     });
@@ -85,15 +80,9 @@ buttonEncrypt.addEventListener("mouseleave", function() {
     
 buttonEncrypt.addEventListener("click", function() {
     buttonEncrypt.style.backgroundColor = "black";
-    setTimeout(deffualtButtonEncrypt,1000)
     });
 
 //Анимация для кнопки Decrypt
-function deffualtButtonDecrypt(){
-    buttonDecrypt.addEventListener("mouseover", function() {
-        buttonDecrypt.style.backgroundColor = "rgb(9, 30, 16)";
-        });
-}
 buttonDecrypt.addEventListener("mouseover", function() {
         buttonDecrypt.style.backgroundColor = "rgb(9, 30, 16)";
         });
@@ -104,7 +93,6 @@ buttonDecrypt.addEventListener("mouseleave", function() {
         
 buttonDecrypt.addEventListener("click", function() {
         buttonDecrypt.style.backgroundColor = "black";
-        setTimeout(deffualtButtonDecrypt,1000)
         });
 
 // Функция ввывода всех элемнтов при загрузке страницы
