@@ -69,19 +69,43 @@ buttonEncrypt.style.color = buttonDecrypt.style.color = "white"
 buttonEncrypt.id = "buttonEncrypt"
 buttonDecrypt.id = "buttonDecrypt"
 
-buttonEncrypt.onmouseleave = function(){
-  buttonEncrypt.style.backgroundColor = "green"
+//Анимация для кнопки Encrypt
+function deffualtButtonEncrypt(){
+    buttonEncrypt.addEventListener("mouseover", function() {
+        buttonEncrypt.style.backgroundColor = "rgb(9, 30, 16)";
+        });
 }
-buttonDecrypt.onmouseleave = function(){
-  buttonDecrypt.style.backgroundColor = "green"
-}
+buttonEncrypt.addEventListener("mouseover", function() {
+    buttonEncrypt.style.backgroundColor = "rgb(9, 30, 16)";
+    });
+    
+buttonEncrypt.addEventListener("mouseleave", function() {
+    buttonEncrypt.style.backgroundColor = "green";
+    });
+    
+buttonEncrypt.addEventListener("click", function() {
+    buttonEncrypt.style.backgroundColor = "black";
+    setTimeout(deffualtButtonEncrypt,1000)
+    });
 
-buttonEncrypt.onmouseover = function(){
-    buttonEncrypt.style.backgroundColor = "#042909"
+//Анимация для кнопки Decrypt
+function deffualtButtonDecrypt(){
+    buttonDecrypt.addEventListener("mouseover", function() {
+        buttonDecrypt.style.backgroundColor = "rgb(9, 30, 16)";
+        });
 }
-buttonDecrypt.onmouseover = function(){
-    buttonDecrypt.style.backgroundColor = "#042909"
-}
+buttonDecrypt.addEventListener("mouseover", function() {
+        buttonDecrypt.style.backgroundColor = "rgb(9, 30, 16)";
+        });
+        
+buttonDecrypt.addEventListener("mouseleave", function() {
+        buttonDecrypt.style.backgroundColor = "green";
+        });
+        
+buttonDecrypt.addEventListener("click", function() {
+        buttonDecrypt.style.backgroundColor = "black";
+        setTimeout(deffualtButtonDecrypt,1000)
+        });
 
 // Функция ввывода всех элемнтов при загрузке страницы
 function main(){
