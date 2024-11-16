@@ -31,9 +31,8 @@ hThree.innerText = "Ввод"
 hFour.innerText = "Ввывод"
 hEncrypt.innerText = "Защифровать" 
 hDecrypt.innerText = "Расщифровать"
-hOne.style.textAlignLast=hTwo.style.textAlignLast=hThree.style.textAlignLast=hFour.style.textAlign = "center"
-hOne.style.color=hTwo.style.color=hThree.style.color=hFour.style.color = hEncrypt.style.color = hDecrypt.style.color = "white"
-hEncrypt.style.textAlign = hDecrypt.style.textAlign = "center"
+hOne.style.textAlign=hTwo.style.textAlign=hThree.style.textAlign=hFour.style.textAlign = hEncrypt.style.textAlign = hDecrypt.style.textAlign = "center"
+hOne.style.color=hTwo.style.color=hThree.style.color=hFour.style.color = "white"
 
 // Стили select
 selectMain.style.width = "80%";
@@ -41,9 +40,10 @@ selectMain.style.height = "3%";
 selectMain.style.marginLeft = "10%"
 selectMain.style.backgroundColor = "black"
 selectMain.style.color = "white"
+selectMain.style.fontSize = "150%"
 selectMain.id = "selectMain"
 
-//Стили input
+//Стили TextArea
 textAreaKey.style.width = textAreaStart.style.width = textAreaOver.style.width = "80%"
 textAreaKey.style.marginLeft = textAreaStart.style.marginLeft = textAreaOver.style.marginLeft = "10%"
 textAreaKey.style.backgroundColor = textAreaStart.style.backgroundColor = textAreaOver.style.backgroundColor= "black"
@@ -55,15 +55,35 @@ textAreaStart.id = "inputStart"
 textAreaOver.id = "inputOver"
 
 //Стили кнопок
-buttonEncrypt.style.width = buttonDecrypt.style.width = "20%" 
+buttonEncrypt.style.display = buttonDecrypt.style.display = "flex"
+buttonEncrypt.style.justifyContent = buttonDecrypt.style.justifyContent = "center"
+buttonEncrypt.style.alignItems = buttonDecrypt.style.alignItems = "center"
+buttonEncrypt.style.width = buttonDecrypt.style.width = "30%" 
 buttonEncrypt.style.height = buttonDecrypt.style.height = "5%"
+buttonEncrypt.style.marginLeft = buttonDecrypt.style.marginLeft = "35%"
+buttonEncrypt.style.marginTop = buttonDecrypt.style.marginTop = "2%"
+buttonEncrypt.style.borderRadius = buttonDecrypt.style.borderRadius = "10%"
+buttonEncrypt.style.fontSize = buttonDecrypt.style.fontSize = "150%"
 buttonEncrypt.style.backgroundColor = buttonDecrypt.style.backgroundColor = "green"
 buttonEncrypt.style.color = buttonDecrypt.style.color = "white"
-buttonEncrypt.style.marginLeft = buttonDecrypt.style.marginLeft = "10%"
-buttonEncrypt.style.marginTop = buttonDecrypt.style.marginTop = "2%"
-buttonEncrypt.style.marginLeft = buttonDecrypt.style.marginLeft = "40%"
-buttonEncrypt.style.borderRadius = buttonDecrypt.style.borderRadius = "10%"
+buttonEncrypt.id = "buttonEncrypt"
+buttonDecrypt.id = "buttonDecrypt"
 
+buttonEncrypt.onmouseleave = function(){
+  buttonEncrypt.style.backgroundColor = "green"
+}
+buttonDecrypt.onmouseleave = function(){
+  buttonDecrypt.style.backgroundColor = "green"
+}
+
+buttonEncrypt.onmouseover = function(){
+    buttonEncrypt.style.backgroundColor = "#042909"
+}
+buttonDecrypt.onmouseover = function(){
+    buttonDecrypt.style.backgroundColor = "#042909"
+}
+
+// Функция ввывода всех элемнтов при загрузке страницы
 function main(){
     document.body.appendChild(divMain);
 
