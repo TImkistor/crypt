@@ -10,9 +10,9 @@ const hThree = document.createElement("h1");
 const hFour = document.createElement("h1");
 const hEncrypt = document.createElement("h2");
 const hDecrypt = document.createElement("h2");
-const inputKey = document.createElement("input");
-const inputStart = document.createElement("input");
-const inputOver = document.createElement("input");
+const textAreaKey = document.createElement("textarea");
+const textAreaStart = document.createElement("textarea");
+const textAreaOver = document.createElement("textarea");
 const buttonDecrypt = document.createElement("div");
 const buttonEncrypt = document.createElement("div");
 
@@ -44,15 +44,15 @@ selectMain.style.color = "white"
 selectMain.id = "selectMain"
 
 //Стили input
-inputKey.style.width = inputStart.style.width = inputOver.style.width = "80%"
-inputKey.style.marginLeft = inputStart.style.marginLeft = inputOver.style.marginLeft = "10%"
-inputKey.style.backgroundColor = inputStart.style.backgroundColor = inputOver.style.backgroundColor= "black"
-inputKey.style.color =  inputStart.style.color = inputOver.style.color = "white"
-inputStart.style.height = inputOver.style.height = "20%"
-inputKey.style.height = "5%"
-inputKey.id = "inputkey"
-inputStart.id = "inputStart"
-inputOver.id = "inputOver"
+textAreaKey.style.width = textAreaStart.style.width = textAreaOver.style.width = "80%"
+textAreaKey.style.marginLeft = textAreaStart.style.marginLeft = textAreaOver.style.marginLeft = "10%"
+textAreaKey.style.backgroundColor = textAreaStart.style.backgroundColor = textAreaOver.style.backgroundColor= "black"
+textAreaKey.style.color =  textAreaStart.style.color = textAreaOver.style.color = "white"
+textAreaStart.style.height = textAreaOver.style.height = "20%"
+textAreaKey.style.height = "5%"
+textAreaKey.id = "inputkey"
+textAreaStart.id = "inputStart"
+textAreaOver.id = "inputOver"
 
 //Стили кнопок
 buttonEncrypt.style.width = buttonDecrypt.style.width = "20%" 
@@ -79,15 +79,15 @@ function main(){
         });
     divMain.appendChild(hTwo)
 
-    divMain.appendChild(inputKey)
+    divMain.appendChild(textAreaKey)
 
     divMain.appendChild(hThree)
 
-    divMain.appendChild(inputStart)
+    divMain.appendChild(textAreaStart)
 
     divMain.appendChild(hFour)
 
-    divMain.appendChild(inputOver)
+    divMain.appendChild(textAreaOver)
 
     divMain.appendChild(buttonEncrypt)
     buttonEncrypt.appendChild(hEncrypt)
