@@ -39,7 +39,7 @@ function selectTextFunction(selectText) {
       return {
         hTwo_display: "block",
         textAreaKey_display: "block",
-        buttonDecrypt_display: "block",
+        buttonDecrypt_display: "flex",
         hEncrypt_innerText: "Защифровать",
       };
     case "sha256":
