@@ -1,4 +1,4 @@
-import { encrypt, selectTextFunction } from "./back.js";
+import { encrypt, selectTextFunction, decrypt } from "./back.js";
 const optionStorage = ["aes", "rs4", "sha256", "md5"];
 
 // Элементы страницы

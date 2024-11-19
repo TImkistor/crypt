@@ -2,9 +2,9 @@ function encrypt(selectText, startText, keyText) {
   let overText = "1";
   switch (selectText) {
     case "aes":
-      return CryptoJS.AES.encrypt(startText, keyText).toString();
+      return CryptoJS.AES.encrypt(startText,keyText).toString();
     case "rs4":
-      return CryptoJS.RC4.encrypt(startText, keyText).toString();
+      return CryptoJS.RC4.encrypt(startText,keyText).toString();
     case "md5":
       return CryptoJS.SHA256(startText).toString();
     case "sha256":
