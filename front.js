@@ -1,5 +1,6 @@
-import { encrypt } from "./back.js";
+import { encrypt,selectTextFunction } from "./back.js";
 const optionStorage = ["aes","rs4",'sha256','md5']
+
 // Элементы страницы
 const divMain = document.createElement("div");
 const selectMain = document.createElement("select");
@@ -50,7 +51,7 @@ textAreaKey.style.backgroundColor = textAreaStart.style.backgroundColor = textAr
 textAreaKey.style.color =  textAreaStart.style.color = textAreaOver.style.color = "white"
 textAreaStart.style.height = textAreaOver.style.height = "20%"
 textAreaKey.style.height = "5%"
-textAreaKey.id = "inputkey"
+textAreaKey.id = "inputKey"
 textAreaStart.id = "inputStart"
 textAreaOver.id = "inputOver"
 
@@ -80,7 +81,12 @@ buttonEncrypt.addEventListener("mouseleave", function() {
     
 buttonEncrypt.addEventListener("click", function() {
     buttonEncrypt.style.backgroundColor = "black";
-    encrypt()
+    encryptFunction()            
+    hTwo.style.display = "block"
+    textAreaKey.style.display = "block"
+    buttonDecrypt.style.display = "block"
+    buttonDecrypt.style.display = "block"
+    hEncrypt.innerText = "Защифровать"
     });
 
 //Анимация для кнопки Decrypt
@@ -94,8 +100,18 @@ buttonDecrypt.addEventListener("mouseleave", function() {
         
 buttonDecrypt.addEventListener("click", function() {
         buttonDecrypt.style.backgroundColor = "black";
-        encrypt()
         });
+
+// Аниимация для selectMain
+selectMain.addEventListener("click", function(){
+let selectText = document.getElementById("selectMain").value
+let param = selectTextFunction(selectText)
+hTwo.style.display = param.hTwo_display
+textAreaKey.style.display = param.textAreaKey_display
+buttonDecrypt.style.display = param.buttonDecrypt_display
+hEncrypt.innerText = param.hEncrypt_innerText
+
+})
 
 // Функция ввывода всех элемнтов при загрузке страницы
 function main(){
@@ -130,3 +146,12 @@ function main(){
     buttonDecrypt.appendChild(hDecrypt)     
 }
 window.onload = main;
+
+function encryptFunction(){
+ let selectText = document.getElementById("selectMain").value
+ let startText = document.getElementById("inputStart").value
+ let keyText = document.getElementById("inputKey").value
+
+ let overText = encrypt(selectText,startText,keyText);
+ console.log(overText)
+}
