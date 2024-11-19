@@ -106,6 +106,8 @@ selectMain.addEventListener("click", function () {
   textAreaKey.style.display = param.textAreaKey_display;
   buttonDecrypt.style.display = param.buttonDecrypt_display;
   hEncrypt.innerText = param.hEncrypt_innerText;
+  buttonDecrypt.style.justifyContent = "center"
+  buttonDecrypt.style.alignItems = "center"
 });
 
 // Функция ввывода всех элемнтов при загрузке страницы
