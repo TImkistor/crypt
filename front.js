@@ -1,3 +1,4 @@
+import { encrypt } from "./back.js";
 const optionStorage = ["aes","rs4",'sha256','md5']
 // Элементы страницы
 const divMain = document.createElement("div");
@@ -128,3 +129,4 @@ function main(){
     divMain.appendChild(buttonDecrypt)
     buttonDecrypt.appendChild(hDecrypt)     
 }
+window.onload = main;

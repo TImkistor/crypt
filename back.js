@@ -5,7 +5,7 @@ import aes from 'crypto-js/aes'
 
 
  export function encrypt() {
-   console.log("Hello word!")
 }
 
+export {encrypt}
 
