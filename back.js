@@ -6,7 +6,7 @@ function encrypt(selectText, startText, keyText) {
     case "rs4":
       return CryptoJS.RC4.encrypt(startText,keyText).toString();
     case "md5":
-      return CryptoJS.SHA256(startText).toString();
+      return CryptoJS.MD5(startText).toString();
     case "sha256":
       return CryptoJS.SHA256(startText).toString();
     default:
