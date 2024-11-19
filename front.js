@@ -129,4 +129,4 @@ function main(){
     divMain.appendChild(buttonDecrypt)
     buttonDecrypt.appendChild(hDecrypt)     
 }
-window.onload = main();
+window.onload = main;
