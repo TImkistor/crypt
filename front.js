@@ -81,12 +81,7 @@ buttonEncrypt.addEventListener("mouseleave", function() {
     
 buttonEncrypt.addEventListener("click", function() {
     buttonEncrypt.style.backgroundColor = "black";
-    encryptFunction()            
-    hTwo.style.display = "block"
-    textAreaKey.style.display = "block"
-    buttonDecrypt.style.display = "block"
-    buttonDecrypt.style.display = "block"
-    hEncrypt.innerText = "Защифровать"
+    encryptFunction()          
     });
 
 //Анимация для кнопки Decrypt
@@ -110,7 +105,6 @@ hTwo.style.display = param.hTwo_display
 textAreaKey.style.display = param.textAreaKey_display
 buttonDecrypt.style.display = param.buttonDecrypt_display
 hEncrypt.innerText = param.hEncrypt_innerText
-
 })
 
 // Функция ввывода всех элемнтов при загрузке страницы
