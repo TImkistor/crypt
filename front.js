@@ -32,18 +32,8 @@ hFour.innerText = "Ввывод";
 hEncrypt.innerText = "Защифровать";
 hDecrypt.innerText = "Расщифровать";
 hTwo.id = "hTwo";
-hOne.style.textAlign =
-  hTwo.style.textAlign =
-  hThree.style.textAlign =
-  hFour.style.textAlign =
-  hEncrypt.style.textAlign =
-  hDecrypt.style.textAlign =
-    "center";
-hOne.style.color =
-  hTwo.style.color =
-  hThree.style.color =
-  hFour.style.color =
-    "white";
+hOne.style.textAlign=hTwo.style.textAlign=hThree.style.textAlign=hFour.style.textAlign=hEncrypt.style.textAlign=hDecrypt.style.textAlign="center";
+hOne.style.color=hTwo.style.color=hThree.style.color=hFour.style.color="white";
 
 // Стили select
 selectMain.style.width = "80%";
@@ -55,22 +45,10 @@ selectMain.style.fontSize = "150%";
 selectMain.id = "selectMain";
 
 //Стили TextArea
-textAreaKey.style.width =
-  textAreaStart.style.width =
-  textAreaOver.style.width =
-    "80%";
-textAreaKey.style.marginLeft =
-  textAreaStart.style.marginLeft =
-  textAreaOver.style.marginLeft =
-    "10%";
-textAreaKey.style.backgroundColor =
-  textAreaStart.style.backgroundColor =
-  textAreaOver.style.backgroundColor =
-    "black";
-textAreaKey.style.color =
-  textAreaStart.style.color =
-  textAreaOver.style.color =
-    "white";
+textAreaKey.style.width=textAreaStart.style.width=textAreaOver.style.width="80%";
+textAreaKey.style.marginLeft=textAreaStart.style.marginLeft=textAreaOver.style.marginLeft="10%";
+textAreaKey.style.backgroundColor=textAreaStart.style.backgroundColor=textAreaOver.style.backgroundColor ="black";
+textAreaKey.style.color=textAreaStart.style.color=textAreaOver.style.color ="white";
 textAreaStart.style.height = textAreaOver.style.height = "20%";
 textAreaKey.style.height = "5%";
 textAreaKey.id = "inputKey";
@@ -79,8 +57,7 @@ textAreaOver.id = "inputOver";
 
 //Стили кнопок
 buttonEncrypt.style.display = buttonDecrypt.style.display = "flex";
-buttonEncrypt.style.justifyContent = buttonDecrypt.style.justifyContent =
-  "center";
+buttonEncrypt.style.justifyContent = buttonDecrypt.style.justifyContent ="center";
 buttonEncrypt.style.alignItems = buttonDecrypt.style.alignItems = "center";
 buttonEncrypt.style.width = buttonDecrypt.style.width = "30%";
 buttonEncrypt.style.height = buttonDecrypt.style.height = "5%";
@@ -88,8 +65,7 @@ buttonEncrypt.style.marginLeft = buttonDecrypt.style.marginLeft = "35%";
 buttonEncrypt.style.marginTop = buttonDecrypt.style.marginTop = "2%";
 buttonEncrypt.style.borderRadius = buttonDecrypt.style.borderRadius = "10%";
 buttonEncrypt.style.fontSize = buttonDecrypt.style.fontSize = "130%";
-buttonEncrypt.style.backgroundColor = buttonDecrypt.style.backgroundColor =
-  "green";
+buttonEncrypt.style.backgroundColor = buttonDecrypt.style.backgroundColor = "green";
 buttonEncrypt.style.color = buttonDecrypt.style.color = "white";
 buttonEncrypt.id = "buttonEncrypt";
 buttonDecrypt.id = "buttonDecrypt";
@@ -119,6 +95,7 @@ buttonDecrypt.addEventListener("mouseleave", function () {
 
 buttonDecrypt.addEventListener("click", function () {
   buttonDecrypt.style.backgroundColor = "black";
+  decryptFunction();
 });
 
 // Аниимация для selectMain
@@ -171,5 +148,16 @@ function encryptFunction() {
   let keyText = document.getElementById("inputKey").value;
 
   let overText = encrypt(selectText, startText, keyText);
-  console.log(overText);
+  console.log(overText)
+  textAreaOver.innerText = overText
+}
+
+function decryptFunction() {
+  let selectText = document.getElementById("selectMain").value;
+  let startText = document.getElementById("inputStart").value;
+  let keyText = document.getElementById("inputKey").value;
+
+  let overText = decrypt(selectText, startText, keyText);
+  console.log(overText)
+  textAreaOver.innerText = overText
 }
