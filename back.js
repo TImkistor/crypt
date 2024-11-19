@@ -4,7 +4,7 @@ import rs4 from 'crypto-js/rc4'
 import aes from 'crypto-js/aes'
 
 
- export function encrypt() {
+function encrypt() {
 }
 
 export {encrypt}
