@@ -30,14 +30,14 @@ function selectTextFunction(selectText) {
   switch (selectText) {
     case "aes":
       return {
-        hTwo_display: "flex",
+        hTwo_display: "block",
         textAreaKey_display: "block",
-        buttonDecrypt_display: "block",
+        buttonDecrypt_display: "flex",
         hEncrypt_innerText: "Защифровать",
       };
     case "rs4":
       return {
-        hTwo_display: "flex",
+        hTwo_display: "block",
         textAreaKey_display: "block",
         buttonDecrypt_display: "flex",
         hEncrypt_innerText: "Защифровать",
