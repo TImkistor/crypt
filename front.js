@@ -1,9 +1,7 @@
-const optionStorage = ["aes","md5",'sha256']
-
+const optionStorage = ["aes","rs4",'sha256','md5']
 // Элементы страницы
 const divMain = document.createElement("div");
 const selectMain = document.createElement("select");
-const buttonMain = document.createElement("button");
 const hOne = document.createElement("h1");
 const hTwo = document.createElement("h1");
 const hThree = document.createElement("h1");
@@ -31,6 +29,7 @@ hThree.innerText = "Ввод"
 hFour.innerText = "Ввывод"
 hEncrypt.innerText = "Защифровать" 
 hDecrypt.innerText = "Расщифровать"
+hTwo.id = "hTwo"
 hOne.style.textAlign=hTwo.style.textAlign=hThree.style.textAlign=hFour.style.textAlign = hEncrypt.style.textAlign = hDecrypt.style.textAlign = "center"
 hOne.style.color=hTwo.style.color=hThree.style.color=hFour.style.color = "white"
 
@@ -80,6 +79,7 @@ buttonEncrypt.addEventListener("mouseleave", function() {
     
 buttonEncrypt.addEventListener("click", function() {
     buttonEncrypt.style.backgroundColor = "black";
+    encrypt()
     });
 
 //Анимация для кнопки Decrypt
@@ -93,6 +93,7 @@ buttonDecrypt.addEventListener("mouseleave", function() {
         
 buttonDecrypt.addEventListener("click", function() {
         buttonDecrypt.style.backgroundColor = "black";
+        encrypt()
         });
 
 // Функция ввывода всех элемнтов при загрузке страницы
@@ -125,5 +126,5 @@ function main(){
     buttonEncrypt.appendChild(hEncrypt)
 
     divMain.appendChild(buttonDecrypt)
-    buttonDecrypt.appendChild(hDecrypt)      
+    buttonDecrypt.appendChild(hDecrypt)     
 }
