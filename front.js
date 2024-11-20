@@ -99,7 +99,7 @@ buttonDecrypt.addEventListener("click", function () {
 });
 
 // Аниимация для selectMain
-optionStorage.addEventListener("click", function () {
+divMain.addEventListener("click", function () {
   let selectText = document.getElementById("selectMain").value;
   let param = selectTextFunction(selectText);
   hTwo.style.display = param.hTwo_display;
@@ -142,7 +142,7 @@ function main() {
   divMain.appendChild(buttonDecrypt);
   buttonDecrypt.appendChild(hDecrypt);
 }
-window.onload = main;
+window.onload = main
 
 function encryptFunction() {
   let selectText = document.getElementById("selectMain").value;
