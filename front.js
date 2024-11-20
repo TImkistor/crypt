@@ -99,7 +99,7 @@ buttonDecrypt.addEventListener("click", function () {
 });
 
 // Аниимация для selectMain
-selectMain.addEventListener("mouseover", function () {
+divMain.addEventListener("click", function () {
   let selectText = document.getElementById("selectMain").value;
   let param = selectTextFunction(selectText);
   hTwo.style.display = param.hTwo_display;
