@@ -18,9 +18,9 @@ function decrypt(selectText,startText,keyText){
   let overText = "1";
   switch (selectText){
     case "aes":
-      return CryptoJS.AES.decrypt(startText,keyText).toString(CryptoJS.enc.Utf8);
+      return CryptoJS.AES.decrypt(startText,keyText).toString();
     case "rs4":
-      return CryptoJS.RC4.decrypt(startText,keyText).toString(CryptoJS.enc.Utf8);
+      return CryptoJS.RC4.decrypt(startText,keyText).toString();
     default:
       overText = "Что то пошло не так попробуйте снова:(";
       return overText;
