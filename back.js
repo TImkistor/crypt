@@ -1,3 +1,4 @@
+// Функция щифрования принимающие 3 перменые с front.js
 function encrypt(selectText, startText, keyText) {
   let overText = "1";
   switch (selectText) {
@@ -14,6 +15,7 @@ function encrypt(selectText, startText, keyText) {
       return overText;
   }
 }
+// Функция дещифрования принимающие 3 перменые с front.js
 function decrypt(selectText,startText,keyText){
   let overText = "1";
   switch (selectText){
@@ -26,6 +28,7 @@ function decrypt(selectText,startText,keyText){
       return overText;
   }
 }
+// Функция возращаюся в front.js стили при выборе в select алгоритм щифрования и принимающая 1 переменую с front.js
 function selectTextFunction(selectText) {
   switch (selectText) {
     case "aes":

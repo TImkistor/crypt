@@ -150,7 +150,6 @@ function encryptFunction() {
   let keyText = document.getElementById("inputKey").value;
 
   let overText = encrypt(selectText, startText, keyText);
-  console.log(overText)
   textAreaOver.innerText = overText
 }
 
@@ -160,7 +159,6 @@ function decryptFunction() {
   let keyText = document.getElementById("inputKey").value;
 
   let overText = decrypt(selectText, startText, keyText);
-  console.log(overText)
   textAreaOver.innerText = overText
 }
 
